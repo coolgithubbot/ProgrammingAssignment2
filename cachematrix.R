@@ -3,7 +3,6 @@
 ##get the value of the matrix
 ##set the value of the inverse
 ##get the value of the inverse
-
 makeCacheMatrix <- function(x = matrix()) {
 m <- NULL
 set <- function(y) {
@@ -17,12 +16,10 @@ list(set = set, get = get,
         setSolve = setSolve,
 	getSolve = getSolve)
 }
-
 ##This function computes the inverse of the special matrix returned by makeCacheMatrix above
 ## If the inverse has already been calculated 
 ##(and the matrix has not changed)
 ##then it retrieves the inverse from the cache.
-
 cacheSolve <- function(x, ...) {
    m <- x$getSolve()
    if(!is.null(m)) {
